@@ -1,0 +1,21 @@
+version: "3"
+networks:
+  url_shortener:
+    driver: bridge
+services:
+ url_shortener:
+  command: ["rails","server","-b","0.0.0.0","-p","3000"]
+  build:
+      context: .
+      dockerfile: docker/url_shortener.dockerfile
+  container_name: url_shortener
+  volumes:
+       - .:/app
+  environment:
+       - RAILS_ENV=development
+  networks:
+    url_shortener:
+      aliases:
+          - url_shortener
+  ports:
+    - 3000:3000

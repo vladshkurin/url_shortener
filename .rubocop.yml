@@ -1,0 +1,39 @@
+AllCops:
+  Exclude:
+    - 'db/*'
+    - 'db/migrate/*'
+    - 'bin/*'
+    - 'Gemfile'
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/AbcSize:
+  Max: 17
+
+Style/RegexpLiteral:
+  Enabled: false
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context', 'resources']
+  Exclude:
+    - 'config/environments/*'
+
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: ()
+    '%i': ()
+    '%w': '[]'
