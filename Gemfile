@@ -19,6 +19,8 @@ group :development, :test do
   gem 'pry', '0.11.3'
   gem 'pry-rails', '0.3.6'
   gem 'rspec-rails', '3.6'
+  gem 'factory_bot_rails', '4.8.2'
+  gem 'rails-controller-testing', '1.0.2'
 end
 
 group :development do
