@@ -19,3 +19,20 @@ services:
           - url_shortener
   ports:
     - 3000:3000
+
+ postgres:
+    build:
+      context: .
+      dockerfile: docker/postgres.dockerfile
+    container_name: url_shortener_postgres
+    environment:
+      POSTGRES_DB: url_shortener_development
+      POSTGRES_USER: vlad_psql
+      POSTGRES_PASSWORD: vlad_psql
+    networks:
+      url_shortener:
+        aliases:
+          - postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
