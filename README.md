@@ -1,24 +1,20 @@
-# README
+### Url Shortener
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Build an application:
 
-Things you may want to cover:
+```sh
+docker-compose build
+```
+Run a migration:
 
-* Ruby version
+```sh
+  docker-compose run url_shortener bundle exec rake db:migrate
+```
 
-* System dependencies
+Run an application:
 
-* Configuration
+```sh
+  docker-compose up -d
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Go to: http://localhost:3000
